@@ -1,0 +1,4 @@
+*.so
+build
+cpp/afm.cpp
+cuda/afm.cpp
