@@ -51,7 +51,7 @@ The pretrained models for U-Net and atrous Residual U-Net can be downloaded from
 - For testing, please run the following command
 
 ```
-python test.py --config-file experiments/afm_unet.yaml --gpu 0
+python test.py --config-file experiments/afm_atrous.yaml --gpu 0
 ```
 
 
