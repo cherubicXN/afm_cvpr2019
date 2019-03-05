@@ -58,9 +58,9 @@ python test.py --config-file experiments/afm_atrous.yaml --gpu 0
 ## 4. Training
 Please run the following command 
 ```
-python train.py --config-file experiments/afm_unet.yaml --gpu 0
+python train.py --config-file experiments/afm_atrous.yaml --gpu 0
 ```
-to train a network. To speedup training procedure, our code will save the generated attraction field maps into dataset/.cache when you run training code in the first time.
+to train a network. To speedup training procedure, our code will save the generated attraction field maps into <AFM_root>/data/wireframe/.cache when you run training code in the first time.
 
 
 ## 5. Citations
