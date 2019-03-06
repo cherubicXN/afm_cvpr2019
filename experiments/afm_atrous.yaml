@@ -1,0 +1,18 @@
+MODEL:
+  ARCH: "atrous"
+
+DATASETS:
+  TRAIN: ("wireframe",)
+  TEST: ("wireframe",)
+
+SOLVER:
+  BATCH_SIZE: 4
+  STEPS: (50,100,150)
+
+SAVE_DIR: "experiments/atrous"
+
+TEST:
+  TRANSFORM: True
+  OUTPUT_MODE: "display"
+  DISPLAY:
+    THRESHOLD: 0.2
