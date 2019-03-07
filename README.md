@@ -2,6 +2,12 @@
 
 This is the offical implementation for our [CVPR paper](https://arxiv.org/abs/1812.02122).
 
+## Introduction
+We reformulate the problem of line segment detection (LSD) as a coupled region coloring problem. Based on this new formulation, we can address the problem of LSD with convolutional neural networks.
+<p align="center">
+<img src="figures/our_method.png" height="400" width="400">
+<p>
+
 
 ## Installation
 Check [INSTALL.md](INSTALL.md) for installation instructions.
