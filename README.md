@@ -22,8 +22,10 @@ We reformulate the problem of line segment detection (LSD) as a coupled region c
 |**Ours (a-trous)**| **0.773** | **0.646** | **6.6**|
 
 ### Precision and Recall Curves
-<img src="figures/PR-curve-wireframe.png"  width="300">
-<img src="figures/PR-curve-wireframe.png" width="300">
+<p align="center">
+<img src="figures/PR-curve-wireframe.png"  width="250">
+<img src="figures/PR-curve-wireframe.png" width="250">
+</p>
 
 ## Installation
 Check [INSTALL.md](INSTALL.md) for installation instructions.
