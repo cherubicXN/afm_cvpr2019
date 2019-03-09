@@ -1,4 +1,4 @@
-# Learning Attraction Field Map for Robust Line Segment Detection (accepted by CVPR 2019)
+# Learning Attraction Field Reprensentation for Robust Line Segment Detection (accepted by CVPR 2019)
 
 This is the offical implementation for our [CVPR paper](https://arxiv.org/abs/1812.02122).
 
