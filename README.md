@@ -8,6 +8,22 @@ We reformulate the problem of line segment detection (LSD) as a coupled region c
 <img src="figures/our_method.png" height="400" width="400">
 <p>
 
+## Results
+
+### F-Measure and FPS
+
+| Methods | Wireframe Dataset | YorkUrban Dataset | FPS|
+|:-----:|:-----:|:-----:|:-----:|
+| [LSD](https://ieeexplore.ieee.org/document/4731268/) | 0.647 | 0.591 | 19.6|
+| [MCMLSD](http://www.elderlab.yorku.ca/wp-content/uploads/2016/12/Almazan_MCMLSD_A_Dynamic_CVPR_2017_paper.pdf) | 0.566 | 0.564 | 0.2 |
+| [Linelet](https://github.com/NamgyuCho/Linelet-code-and-YorkUrban-LineSegment-DB)| 0.644 | 0.585 | 0.14|
+| [Wireframe Parser](https://github.com/huangkuns/wireframe)| 0.728 | 0.627 | 2.24|
+|**Ours (U-Net)**| **0.752** | **0.639** | **10.3**|
+|**Ours (a-trous)**| **0.773** | **0.646** | **6.6**|
+
+### Precision and Recall Curves
+<img src="figures/PR-curve-wireframe.png"  width="300">
+<img src="figures/PR-curve-wireframe.png" width="300">
 
 ## Installation
 Check [INSTALL.md](INSTALL.md) for installation instructions.
