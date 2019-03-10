@@ -41,7 +41,7 @@ class AFMTrainDataset(data.Dataset):
         return image, afmap
 
 class AFMTestDataset(data.Dataset):
-    def __init__(self, data_root):        
+    def __init__(self, data_root, img_res = [320,320]):        
         '''
         For testing dataset, the images should be placed in the DATASET_NAME/images
 
@@ -66,6 +66,7 @@ class AFMTestDataset(data.Dataset):
             raise NotImplementedError()
         
         self.dataset = dataset
+        self.img_res = img_res
     
     def __len__(self):
         return len(self.dataset)
@@ -74,6 +75,7 @@ class AFMTestDataset(data.Dataset):
         image_path = osp.join(self.data_root, 'images',self.dataset[idx]['filename'])
 
         image = cv2.imread(image_path)
+        image = cv2.resize(image, (self.img_res[1],self.img_res[0]))
         image = np.array(image,dtype=np.float32)/255.0              
         image[...,0] = (image[...,0] - 0.485)/0.229
         image[...,1] = (image[...,1] - 0.456)/0.224

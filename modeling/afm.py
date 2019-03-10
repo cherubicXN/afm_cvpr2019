@@ -14,6 +14,7 @@ from lib.afm_op import afm
 from lib.squeeze_to_lsg import lsgenerator
 from util.progbar import progbar
 from lib.afm_op import afm
+import cv2
 
 class AFM(object):
     def __init__(self,cfg):
@@ -135,13 +136,16 @@ class AFM(object):
                 lines_var = Variable(lines).cuda()
                 shape_info = Variable(shape_info).cuda()
 
-                image_var = self.input_method(image_var)
+                # image_var = self.input_method(image_var)
                 afmap_pred = self.model(image_var)
 
                 lines_pred,xx,yy = lsgenerator(afmap_pred[0].cpu().data.numpy())
                 afmap_gt, label = afm(lines_var,shape_info, image_var.shape[2],image_var.shape[3])
+                image_raw = cv2.imread(osp.join(dataset.dataset.data_root,'images',fname[0]))
+                # import pdb
+                # pdb.set_trace()
                 output_dict = {
-                    'image': image[0].numpy(),
+                    'image': image_raw,
                     'image_resized': image_var[0].cpu().data.numpy(),
                     'lines_pred_resized': lines_pred,
                     'lines_gt': lines.numpy(),

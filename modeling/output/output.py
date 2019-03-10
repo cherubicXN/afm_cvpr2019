@@ -9,13 +9,13 @@ import scipy.io as sio
 @OUTPUT_METHODS.register("display")
 def display(data_dict, cfg):
     image = data_dict['image'] 
-    image_resized = data_dict['image_resized']
+    # image_resized = data_dict['image_resized']
 
-    image = np.transpose(image, [1,2,0])
-    image[...,0] = (image[...,0]*0.229 + 0.485)
-    image[...,1] = (image[...,1]*0.224 + 0.456)
-    image[...,2] = (image[...,2]*0.225 + 0.406)
-    image = np.array(image*255,dtype=np.uint8)
+    # image = np.transpose(image, [1,2,0])
+    # image[...,0] = (image[...,0]*0.229 + 0.485)
+    # image[...,1] = (image[...,1]*0.224 + 0.456)
+    # image[...,2] = (image[...,2]*0.225 + 0.406)
+    # image = np.array(image*255,dtype=np.uint8)
     # import pdb
     # pdb.set_trace()
     height, width = image.shape[:2]
@@ -48,11 +48,11 @@ def save(data_dict, cfg):
     image = data_dict['image'] 
     image_resized = data_dict['image_resized']
 
-    image = np.transpose(image, [1,2,0])
-    image[...,0] = (image[...,0]*0.229 + 0.485)
-    image[...,1] = (image[...,1]*0.224 + 0.456)
-    image[...,2] = (image[...,2]*0.225 + 0.406)
-    image = np.array(image*255,dtype=np.uint8)
+    # image = np.transpose(image, [1,2,0])
+    # image[...,0] = (image[...,0]*0.229 + 0.485)
+    # image[...,1] = (image[...,1]*0.224 + 0.456)
+    # image[...,2] = (image[...,2]*0.225 + 0.406)
+    # image = np.array(image*255,dtype=np.uint8)
     # import pdb
     # pdb.set_trace()
     height, width = image.shape[:2]

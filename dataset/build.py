@@ -23,8 +23,8 @@ def build_test_dataset(config):
 
     if root_list == []:
         return None
-
-    get_dataset = lambda path: data.DataLoader(AFMTestDataset(path),batch_size=1, shuffle=False, collate_fn=collect_fn, num_workers=config.DATALOADER.NUM_WORKERS)
+    IN_RES = [config.INPUT.IN_RES]*2
+    get_dataset = lambda path: data.DataLoader(AFMTestDataset(path,IN_RES),batch_size=1, shuffle=False, collate_fn=collect_fn, num_workers=config.DATALOADER.NUM_WORKERS)
 
     datasets  = list(map(get_dataset,root_list))
 
