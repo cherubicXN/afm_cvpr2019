@@ -58,10 +58,8 @@ class AFMTestDataset(data.Dataset):
             with open(osp.join(self.data_root,'test.txt'),'r') as handle:
                 filename = [f.rstrip('\n') for f in handle.readlines()]
         
-            dataset = []
-            for f in filename:
-                dataset += {'filename': f,
-                            'lines': np.array([0,0,0,0],dtype=np.float32)}
+            dataset = [{'filename': f, 'lines': np.array([0,0,0,0],dtype=np.float32)} for f in filename]
+
         else:
             raise NotImplementedError()
         
